@@ -62,6 +62,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
     // If the request is not a POST, we know that we're not dealing with a
     // Farcaster Frame button click. Therefore, we should send the Farcaster Frame
     // content
+    console.log("not a post request, sending Farcaster Frame content");
     res.status(200).setHeader("Content-Type", "text/html").send(`
     <!DOCTYPE html>
     <html>
